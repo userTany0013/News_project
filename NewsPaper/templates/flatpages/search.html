@@ -11,6 +11,11 @@ Posts
 <h3>{{ Posts|length }}</h3>
 <hr size="20">
 
+<form action="" method="get">
+    {{ filterset.form.as_p }}
+    <input type="submit" value="Найти" />
+</form>
+
 {% if Posts %}
 {% for Post in Posts %}
 
@@ -45,7 +50,3 @@ Posts
 
 
 {% endblock content %}
-
-
-
-
